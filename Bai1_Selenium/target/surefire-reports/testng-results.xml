@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-10T15:24:38 ICT" name="Final Lab Review Suite" finished-at="2026-03-10T15:24:39 ICT" duration-ms="451">
+    <groups>
+    </groups>
+    <test started-at="2026-03-10T15:24:38 ICT" name="WhiteBox Order Processor Tests" finished-at="2026-03-10T15:24:39 ICT" duration-ms="451">
+      <class name="bai6.OrderProcessorTest">
+        <test-method signature="testGoldMember()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:38 ICT" name="testGoldMember" description="P6: Khách hàng GOLD" finished-at="2026-03-10T15:24:38 ICT" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoldMember -->
+        <test-method signature="testInvalidCoupon()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testInvalidCoupon" description="P5: Mã coupon không hợp lệ" finished-at="2026-03-10T15:24:39 ICT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidCoupon -->
+        <test-method signature="testP1_EmptyCart()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testP1_EmptyCart" description="P1: Giỏ hàng trống" finished-at="2026-03-10T15:24:39 ICT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP1_EmptyCart -->
+        <test-method signature="testP1_NullCart()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testP1_NullCart" description="P1: Giỏ hàng bị null" finished-at="2026-03-10T15:24:39 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP1_NullCart -->
+        <test-method signature="testP2_NormalNoCouponHighTotal()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testP2_NormalNoCouponHighTotal" description="P2: Khách hàng thường, không coupon, đơn hàng lớn" finished-at="2026-03-10T15:24:39 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testP2_NormalNoCouponHighTotal -->
+        <test-method signature="testPlatinumMember()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testPlatinumMember" description="P7: Khách hàng PLATINUM" finished-at="2026-03-10T15:24:39 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlatinumMember -->
+        <test-method signature="testSale10Coupon()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testSale10Coupon" description="P3: Sử dụng coupon SALE10" finished-at="2026-03-10T15:24:39 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSale10Coupon -->
+        <test-method signature="testSale20Coupon()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testSale20Coupon" description="P4: Sử dụng coupon SALE20" finished-at="2026-03-10T15:24:39 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSale20Coupon -->
+        <test-method signature="testShippingCod()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testShippingCod" description="P9: Đơn hàng nhỏ, thanh toán COD (Ship 20k)" finished-at="2026-03-10T15:24:39 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShippingCod -->
+        <test-method signature="testShippingOnline()[pri:0, instance:bai6.OrderProcessorTest@2ee456c7]" started-at="2026-03-10T15:24:39 ICT" name="testShippingOnline" description="P8: Đơn hàng nhỏ, thanh toán Online (Ship 30k)" finished-at="2026-03-10T15:24:39 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShippingOnline -->
+      </class> <!-- bai6.OrderProcessorTest -->
+    </test> <!-- WhiteBox Order Processor Tests -->
+  </suite> <!-- Final Lab Review Suite -->
+</testng-results>

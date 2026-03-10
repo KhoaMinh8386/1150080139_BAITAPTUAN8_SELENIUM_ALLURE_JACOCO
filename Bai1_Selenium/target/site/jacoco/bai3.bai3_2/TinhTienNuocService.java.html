@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TinhTienNuocService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bai1_Selenium</a> &gt; <a href="index.source.html" class="el_package">bai3.bai3_2</a> &gt; <span class="el_source">TinhTienNuocService.java</span></div><h1>TinhTienNuocService.java</h1><pre class="source lang-java linenums">package bai3.bai3_2;
+
+<span class="nc" id="L3">public class TinhTienNuocService {</span>
+    /**
+     * Tính tiền nước dựa trên số m3 và loại khách hàng.
+     * 
+     * @param soM3          Số mét khối nước tiêu thụ
+     * @param loaiKhachHang Loại khách hàng (ho_ngheo, dan_cu, kinh_doanh, ...)
+     * @return Tổng số tiền phải trả
+     */
+    public static double tinhTienNuoc(int soM3, String loaiKhachHang) {
+
+<span class="nc bnc" id="L13" title="All 2 branches missed.">        if (soM3 &lt;= 0)</span>
+<span class="nc" id="L14">            return 0;</span>
+
+        double don_gia;
+
+<span class="nc bnc" id="L18" title="All 2 branches missed.">        if (loaiKhachHang.equals(&quot;ho_ngheo&quot;)) {</span>
+<span class="nc" id="L19">            don_gia = 5000;</span>
+
+<span class="nc bnc" id="L21" title="All 2 branches missed.">        } else if (loaiKhachHang.equals(&quot;dan_cu&quot;)) {</span>
+
+<span class="nc bnc" id="L23" title="All 2 branches missed.">            if (soM3 &lt;= 10) {</span>
+<span class="nc" id="L24">                don_gia = 7500;</span>
+
+<span class="nc bnc" id="L26" title="All 2 branches missed.">            } else if (soM3 &lt;= 20) {</span>
+<span class="nc" id="L27">                don_gia = 9900;</span>
+
+            } else {
+<span class="nc" id="L30">                don_gia = 11400;</span>
+            }
+
+        } else {
+<span class="nc" id="L34">            don_gia = 22000;</span>
+        }
+
+<span class="nc" id="L37">        return soM3 * don_gia;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Final Lab Review Suite">
+
+    <!-- Bài 6.2: White-box và Test Suite Design -->
+    <test name="WhiteBox Order Processor Tests">
+        <classes>
+            <class name="bai6.OrderProcessorTest"/>
+        </classes>
+    </test>
+
+    <!-- Các bài trước đó có thể thêm vào đây nếu cần -->
+</suite>

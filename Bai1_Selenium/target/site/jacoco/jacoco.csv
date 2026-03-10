@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Bai1_Selenium,bai6,Item,0,9,0,0,0,4,0,2,0,2
+Bai1_Selenium,bai6,OrderProcessor,0,97,1,19,0,22,1,11,0,2
+Bai1_Selenium,bai4,PhiShipService,74,0,14,0,18,0,9,0,2,0
+Bai1_Selenium,bai5,VayVonService,16,0,6,0,2,0,5,0,2,0
+Bai1_Selenium,bai3.bai3_1,XepLoaiService,37,0,12,0,12,0,8,0,2,0
+Bai1_Selenium,bai3.bai3_2,TinhTienNuocService,40,0,10,0,13,0,7,0,2,0
+Bai1_Selenium,utils,PhoneValidator,35,0,8,0,9,0,6,0,2,0

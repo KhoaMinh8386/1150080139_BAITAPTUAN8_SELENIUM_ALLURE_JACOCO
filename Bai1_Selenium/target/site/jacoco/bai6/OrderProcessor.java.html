@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrderProcessor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bai1_Selenium</a> &gt; <a href="index.source.html" class="el_package">bai6</a> &gt; <span class="el_source">OrderProcessor.java</span></div><h1>OrderProcessor.java</h1><pre class="source lang-java linenums">package bai6;
+
+import java.util.List;
+
+<span class="fc" id="L5">public class OrderProcessor {</span>
+    /**
+     * Tính tổng tiền đơn hàng dựa trên danh sách sản phẩm, mã giảm giá, hạng thành
+     * viên và phương thức thanh toán.
+     * 
+     * @param items         Danh sách sản phẩm (không được null hoặc rỗng)
+     * @param couponCode    Mã giảm giá (SALE10, SALE20)
+     * @param memberLevel   Hạng thành viên (NORMAL, GOLD, PLATINUM)
+     * @param paymentMethod Phương thức thanh toán (COD hoặc khác)
+     * @return Tổng số tiền phải thanh toán
+     */
+    public double calculateTotal(List&lt;Item&gt; items, String couponCode, String memberLevel, String paymentMethod) {
+<span class="fc bfc" id="L17" title="All 4 branches covered.">        if (items == null || items.isEmpty()) { // D1</span>
+<span class="fc" id="L18">            throw new IllegalArgumentException(&quot;Gio hang trong&quot;);</span>
+        }
+
+<span class="fc" id="L21">        double subtotal = items.stream().mapToDouble(Item::getPrice).sum();</span>
+<span class="fc" id="L22">        double discount = 0;</span>
+
+        // Giảm giá theo coupon
+<span class="pc bpc" id="L25" title="1 of 4 branches missed.">        if (couponCode != null &amp;&amp; !couponCode.isEmpty()) { // D2</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">            if (couponCode.equals(&quot;SALE10&quot;)) { // D3</span>
+<span class="fc" id="L27">                discount = subtotal * 0.10;</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            } else if (couponCode.equals(&quot;SALE20&quot;)) { // D4</span>
+<span class="fc" id="L29">                discount = subtotal * 0.20;</span>
+            } else {
+<span class="fc" id="L31">                throw new IllegalArgumentException(&quot;Ma giam gia khong hop le&quot;);</span>
+            }
+        }
+
+        // Giảm giá theo thành viên
+<span class="fc" id="L36">        double memberDiscount = 0;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (memberLevel.equals(&quot;GOLD&quot;)) { // D5</span>
+<span class="fc" id="L38">            memberDiscount = (subtotal - discount) * 0.05;</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        } else if (memberLevel.equals(&quot;PLATINUM&quot;)) { // D6</span>
+<span class="fc" id="L40">            memberDiscount = (subtotal - discount) * 0.10;</span>
+        }
+
+<span class="fc" id="L43">        double total = subtotal - discount - memberDiscount;</span>
+
+        // Phí ship if total &lt; 500,000
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (total &lt; 500000) { // D7</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (!paymentMethod.equals(&quot;COD&quot;)) { // D8</span>
+<span class="fc" id="L48">                total += 30000; // Online/Other</span>
+            } else {
+<span class="fc" id="L50">                total += 20000; // COD</span>
+            }
+        }
+
+<span class="fc" id="L54">        return total;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
